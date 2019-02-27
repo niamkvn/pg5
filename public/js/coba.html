@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style><link rel="stylesheet" href="coba.css"></style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="listofstuff">
+        <div class="anitem">
+            <span class="itemname">Item1</span>
+            <span class="itemdescruption">AboutItem1</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item2</span>
+            <span class="itemdescruption">AboutItem2</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+        <div class="anitem">
+            <span class="itemname">Item3</span>
+            <span class="itemdescruption">AboutItem3</span>
+        </div>
+    </div>
+
+    <script src="">
+    $(document).ready(function() {
+    var wrapper = $('#listofstuff'),
+    element = wrapper.find('.anitem'),
+    lastElement = wrapper.find('.anitem:last-child'),
+    lastElementTop = lastElement.position().top,
+    elementsHeight = element.outerHeight(),
+    scrollAmount = lastElementTop - 2 * elementsHeight;
+
+    $('#listofstuff').animate({
+        scrollTop: scrollAmount
+    }, 1000, function() {
+        lastElement.addClass('current-last');
+    });
+});</script>
+</body>
+
+</html>

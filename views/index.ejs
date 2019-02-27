@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/styles.css" />
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <header class="showcase">
+        <div class="content">
+            <img src="https://image.ibb.co/ims4Ep/logo.png" class="logo" alt="Traversy Media">
+            <div class="title">
+                Pendeteksi Gempa
+            </div>
+            <div class="text">
+                Final Project Siskom Kelompok 5
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container grid-3 center">
+            <div>
+                <i class="fab fa-youtube fa-3x"></i>
+                <!-- <h3>YouTube</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis!</p> -->
+            </div>
+            <div>
+                <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                <!-- <h3>Courses</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis!</p> -->
+            </div>
+            <div>
+                <i class="fas fa-briefcase fa-3x"></i>
+                <!-- <h3>Freelancing Projects</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis!</p> -->
+            </div>
+        </div>
+    </section>
+
+
+    <div class="wrapper">
+        <div class="ls">
+            <h1>--pg5 Project Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Tentang Proyek</a></li>
+                    <li><a href="#">Komponen</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Proyek Lain</a></li>
+                </ul>
+            </nav>
+            <div class="garis"></div>
+        </div>
+        <div class="main">
+            <!-- <h1>Data Grafik Realtime</h1> -->
+            <canvas></canvas>
+
+            <div class="article">
+                <h2>Tentang Proyek Kami</h2>
+                <p>
+                    Proyek ini dibuat untuk mendeteksi gempa dengan indikasi adanya getaran yang diterima oleh sensor
+                    getar SW-420. Kemudian nilai analog yang dibaca tersebut diproses oleh Arduino. Lebih lanjut, hasil
+                    pembacaan sensor kemudian dikirimkan ke server.
+
+                    Sebelum disimpan ke database, nilai yang dibaca sensor diproses terlebih dahulu. Jika nilai yang
+                    dibaca melebihi batas toleran, maka waktu terjadinya getaran tersebut disimpan ke database yang
+                    meliputi hari, bulan, tahun, jam, menit dan dan detik. Sehingga tercatat dokumentasi rekam data yang bisa ditampilkan pada halaman website ini.
+                </p>
+            </div>
+        </div>
+
+        <div class="historys-box">
+            <div class="historys-header">
+                <h3>Rekaman Data</h3>
+            </div>
+
+            <div id="historys">
+                <% for(let i=0; i < d.length; i++){ %>
+                <div class="historys-item">
+                    <h2>
+                        <%= d[i].date %>
+                    </h2>
+                    <div class="data">Durasi :
+                        <%= d[i].duration %>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+
+        </div>
+        <!-- About -->
+        <section class="about bg-light">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="center">
+                        <i class="fas fa-laptop-code fa-10x"></i>
+                    </div>
+                    <div>
+                        <h1>Anggota:</h1>
+                        <p>
+                            -Kalvin Niam Aunillah / 17650060
+                        </p>
+                        <p>
+                            -Rofi'ul Khasanah / 17650039
+                        </p>
+                        <p>
+                            -Nabila Maulida / 17650034
+                        </p>
+                        <p>
+                            -Pujo Hastowo Ardi / 17650077
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="center">
+        <p>Kelompok 5 &copy; 2018</p>
+    </footer>
+    <script src="./js/client_pg5.js"></script>
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+</body>
+
+</html>
